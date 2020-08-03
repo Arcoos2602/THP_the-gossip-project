@@ -1,10 +1,15 @@
 <h1> Bienvenue cher visiteur ! </h1>
 <h3> Voici la listes des potins :</h3>
 
-<% @gossips.each_with_index do |gossip, i|%>
-  <p>
-    Auteur : <%= @gossips[i].user.first_name %> </br>
-    Titre : <%= @gossips[i].title %> </br>
-    <%= link_to "Page du potin", gossip_path(@gossips[i])%>
-  </p>
-<% end %>
+
+<div id="lol">
+  <% @gossips.each_with_index do |gossip, i|%>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Titre : <%= @gossips[i].title %></h5>
+        <p class="card-text">Auteur : <%= @gossips[i].user.first_name %></p>
+        <%= link_to "Page du potin", gossip_path(@gossips[i])%>
+      </div>
+    </div>
+  <% end %>
+</div>
