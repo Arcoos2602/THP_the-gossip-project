@@ -1,5 +1,10 @@
 <h1> Bienvenue cher visiteur ! </h1>
 <h3> Voici la listes des potins :</h3>
 
-<p> Auteur : <%= Gossip.find(0).user.first_name %> </br>
- Titre du potin : <%= Gossip.find(0).first.title %> </p>
+<% @gossips.each_with_index do |gossip, i|%>
+  <p>
+    Auteur : <%= @gossips[i].user.first_name %> </br>
+    Titre : <%= @gossips[i].title %>
+    <%= link_to "Page du potin", , class: "nav-link" %>
+  </p>
+<% end %>
