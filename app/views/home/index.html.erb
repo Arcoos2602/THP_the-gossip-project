@@ -4,7 +4,7 @@
 <% @gossips.each_with_index do |gossip, i|%>
   <p>
     Auteur : <%= @gossips[i].user.first_name %> </br>
-    Titre : <%= @gossips[i].title %>
-    <%= link_to "Page du potin", , class: "nav-link" %>
+    Titre : <%= @gossips[i].title %> </br>
+    <%= link_to "Page du potin", gossip_path(@gossips[i])%>
   </p>
 <% end %>

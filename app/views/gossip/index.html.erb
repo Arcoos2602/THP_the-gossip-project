@@ -1,0 +1,7 @@
+<h1> Voici la fiche du Potin </h1>
+
+<p> Titre : <%=@title%></br>
+    Contenu : <%=@content%></br>
+    Date de création :  <%=@date%></br>
+    Lien pour la page de l'auteur : <%= link_to "Page de l'auteur", author_path(@user_id)%>
+</p>
